@@ -4,12 +4,18 @@ let tabuleiroHTML = [];
 let imagens = [ 'adam.png', 'ney.png', 'seth.png', 'tata.png', 'thugga.png', 'whind.png', 'yas.png' ];
  let cartasDuplicadas = [];
  let cartasDuplicadasCerto = [];
+ let condicaoInicial ;
 
 
     
-  
+ 
+ while(numeroDeCartas < 4 || numeroDeCartas > 14 ||   numeroDeCartas % 2 !== 0 || isNaN(numeroDeCartas)){
+  numeroDeCartas = prompt("Digite o numero de cartas");
+ }
 
  if (numeroDeCartas % 2 == 0 && numeroDeCartas >= 4 && numeroDeCartas <= 14){
+
+  condicaoInicial = true;
 
     let cartasEmbaralhadas = imagens.sort(() => Math.random() - 0.5);
  
@@ -38,14 +44,13 @@ let imagens = [ 'adam.png', 'ney.png', 'seth.png', 'tata.png', 'thugga.png', 'wh
     }
  
  }
- 
   
+ 
+    tabuleiro.innerHTML = tabuleiroHTML ;
+
   
 
  
- 
- 
-    tabuleiro.innerHTML = tabuleiroHTML ;
 
   let cartas = document.querySelectorAll(".carta");
   let primeiraCarta;

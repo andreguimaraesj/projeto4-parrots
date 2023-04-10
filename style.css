@@ -1,0 +1,67 @@
+body{
+    background: #EEF9BF;
+    margin-top: 40px;
+    margin-bottom: 47px;
+}
+
+h1{
+    margin: auto; 
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: #75B79E;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.tabuleiro{
+     display: flex;
+    margin: auto;
+    width: 80vw; 
+    height: fit-content; 
+    flex-wrap: wrap;
+     transform-style: preserve-3d;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 47px;
+    box-sizing: border-box;
+}
+.carta:active{
+    transform: scale(0.7);
+ }
+.carta{
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    margin: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 380ms ease;
+    border: 1px solid #99CEA8;
+    box-sizing: border-box;
+}
+.carta.vira{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    
+}
+
+.cara ,
+.nuca {
+     position: absolute;
+     background: #A7E9AF;
+ }
+
+ .cara{
+    transform: rotateY(180deg);
+  }
+
+   
+

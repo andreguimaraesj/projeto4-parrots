@@ -29,9 +29,9 @@ let imagens = [ 'adam.png', 'ney.png', 'seth.png', 'tata.png', 'thugga.png', 'wh
 
     for(i = 0; i < (numeroDeCartas ) ; i++){
         tabuleiroHTML +=
-        `<div class="carta" data-card = "${cartasProntas[i]}"> 
-                <img class="cara" src="./imagens/${cartasProntas[i]}">
-                <img class="nuca" src="./imagens/back.png">
+        `<div class="carta"  data-test="card" data-card = "${cartasProntas[i]}"> 
+                <img class="cara" data-test="face-up-image" src="./imagens/${cartasProntas[i]}">
+                <img class="nuca" data-test="face-down-image" src="./imagens/back.png">
         </div> `;
 
 
